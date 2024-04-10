@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container__header">
+        <div class="tooltip">
+            <a href="#">📄</a>
+            <span class="headertooltiptext">Main Menu</span>
+            <h1>📬 Mail App</h1>
+        </div>
+    </div>
+    
+
+    <div class="container__add">
+        <h2>📄Compose</h2>
+    </div>
+
+    <div class="menu">
+        <ul class="menu__list">
+            <li class="tooltip">
+                📥<a href="#">Inbox</a>
+                <span class="tooltiptext">Inbox</span>
+            </li>
+            <li class="tooltip">
+                ⭐️<a href="#">Starred</a>
+                <span class="tooltiptext">Starred</span>
+            </li>
+            <li class="tooltip">
+                ⏱<a href="#">Snoozed</a>
+                <span class="tooltiptext">Snoozed</span>
+            </li>
+            <li class="tooltip">
+                ➡️<a href="#">Sent</a>
+                <span class="tooltiptext">Sent</span>
+            </li>
+            <li class="tooltip">
+                📄<a href="#">Drafts</a>
+                <span class="tooltiptext">Drafts</span>
+            </li>
+        </ul>
+    </div>
+    
+    <app-sidebar-button text="Draft" unread="1">
+        <slot slot="icon"></slot>
+    </app-sidebar-button>
+</body>
+
+</html>
