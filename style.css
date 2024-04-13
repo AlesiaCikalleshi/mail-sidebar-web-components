@@ -26,7 +26,7 @@ body {
 }
 
 
-
+/* Header styles */
 
 .container__header{
     color: #454846;
@@ -47,6 +47,8 @@ body {
     font-size: 25px;
 }
 
+/* List styles */
+
 .menu ul {
     list-style: none;
 }
@@ -61,14 +63,16 @@ body {
     color: #264570;
 }
 
-.menu li:active {
-    display: flex;
+
+.menu .active {
+    background-color: #D3E3FD;
+    color: white;
+    border-radius: 10px;
+    font-weight: 100;
+    width: 20%;
     justify-content: flex-start;
-    background-color: #D8DAFF;
-    color: #264570;
+    align-self: start;
 }
-
-
 
 
 .menu li:hover {
@@ -80,6 +84,11 @@ body {
     width: 20%;
     justify-content: flex-start;
     align-self: start;
+    cursor: pointer;
+}
+.menu .active:hover {
+    background-color: #D3E3FD;
+    border: none;
 }
 
 
@@ -151,4 +160,15 @@ body {
 .headertooltiptext{
     font-size: smaller;
     font-weight: 20px;
+}
+
+app-sidebar-button {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
