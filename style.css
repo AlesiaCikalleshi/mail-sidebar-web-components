@@ -28,16 +28,16 @@ body {
 
 /* Header styles */
 
-.container__header{
+.container__header {
     color: #454846;
     margin-bottom: 2%;
 }
 
-.container__header .tooltip a:hover{
+.container__header .tooltip a:hover {
     background-color: #f3f3f3;
 }
 
-.container__header .tooltip a{
+.container__header .tooltip a {
     text-decoration: none;
     border-radius: 20px;
     color: #264570;
@@ -86,46 +86,20 @@ body {
     align-self: start;
     cursor: pointer;
 }
+
 .menu .active:hover {
     background-color: #D3E3FD;
     border: none;
 }
 
+/* Tooltip style*/
 
 .tooltip {
     position: relative;
     display: flex;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 70px;
-    background-color: rgb(76, 74, 74);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 100%;
-}
-
-.tooltip .tooltiptext::after {
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent rgb(76, 74, 74) transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-
+.tooltip .tooltiptext,
 .tooltip .headertooltiptext {
     visibility: hidden;
     width: 70px;
@@ -135,7 +109,34 @@ body {
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
+}
+
+.tooltip .tooltiptext {
     z-index: 1;
+    top: -5px;
+    left: 100%;
+}
+
+.tooltip .tooltiptext::after,
+.headertooltiptext::after {
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.tooltip .tooltiptext::after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-color: transparent rgb(76, 74, 74) transparent transparent;
+}
+
+.tooltip:hover .tooltiptext,
+.headertooltiptext {
+    visibility: visible;
+}
+
+.tooltip .headertooltiptext {
     top: 105%;
     left: 4%;
     margin-left: -60px;
@@ -143,26 +144,18 @@ body {
 
 
 .tooltip .headertooltiptext::after {
-    position: absolute;
     bottom: 100%;
     left: 3%;
     margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
     border-color: transparent transparent black transparent;
-  }
-
-
-  .tooltip:hover .headertooltiptext {
-    visibility: visible;
 }
 
-.headertooltiptext{
+.headertooltiptext {
     font-size: smaller;
     font-weight: 20px;
 }
 
-app-sidebar-button {
+/* .app-sidebar-button .slot[slot="icon"]{
     position: absolute;
     top: 0;
     left: 90%;
@@ -172,3 +165,6 @@ app-sidebar-button {
     height: 20px;
     line-height: 20px;
 }
+.app-sidebar-button {
+    position: relative;
+} */
